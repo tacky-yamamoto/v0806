@@ -12,8 +12,8 @@ namespace v0806
 {
     public partial class Form1 : Form
     {
-        int vx = -2;
-        int vy = -2;
+        float vx = -1;
+        float vy = -1;
         public Form1()
         {
             InitializeComponent();
@@ -27,22 +27,26 @@ namespace v0806
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label1.Left += vx;
-            label1.Top += vy;
+            label1.Left += (int)vx;
+            label1.Top += (int)vy;
             if (label1.Left < 0)
             {
+                vx *= 1.1f;
                 vx = Math.Abs(vx);
             }
             if (label1.Top < 0)
             {
+                vy *= 1.1f;
                 vy = Math.Abs(vy);
             }
             if (label1.Left+label1.Width > ClientSize.Width)
             {
+                vx *= 1.1f;
                 vx = -Math.Abs(vx);
             }
             if (label1.Bottom > ClientSize.Height)
             {
+                vy *= 1.1f;
                 vy = -Math.Abs(vy);
             }
         }
