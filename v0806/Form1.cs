@@ -29,33 +29,21 @@ namespace v0806
         {
             label1.Left += vx;
             label1.Top += vy;
-            if (label1.Left<0)
+            if (label1.Left < 0)
             {
-                if (vx < 0)
-                {
-                    vx *= -1;
-                }
+                vx = Math.Abs(vx);
             }
             if (label1.Top < 0)
             {
-                if (vy < 0)
-                {
-                    vy *= -1;
-                }
+                vy = Math.Abs(vy);
             }
-            if (label1.Right > ClientSize.Width)
+            if (label1.Left+label1.Width > ClientSize.Width)
             {
-                if (vx > 0)
-                {
-                    vx *= -1;
-                }
+                vx = -Math.Abs(vx);
             }
             if (label1.Bottom > ClientSize.Height)
             {
-                if (vy > 0)
-                {
-                    vy *= -1;
-                }
+                vy = -Math.Abs(vy);
             }
         }
 

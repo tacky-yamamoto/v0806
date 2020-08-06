@@ -39,9 +39,9 @@
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 20F);
             this.label1.Location = new System.Drawing.Point(72, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 27);
+            this.label1.Size = new System.Drawing.Size(83, 27);
             this.label1.TabIndex = 0;
-            this.label1.Text = "(´・ω・`)";
+            this.label1.Text = "(・ω・)";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // timer1
